@@ -1,22 +1,80 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, rgba(28,61,247,1) 0%, rgba(215,64,64,1) 100%);
+    min-height: 100vh; /* Ensures it covers the full height of the viewport */
+    background-attachment: fixed; /* Ensures the gradient doesn't move while scrolling */
+    background-size: cover; /* Ensures it stretches across the entire viewport */
+    color: white; /* Maintains text readability */
 }
+
+
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+    .navbar a.nav-link {
+        color: white;
+        font-weight: bold;
+    }
+
+        .navbar a.nav-link:hover {
+            color: rgba(215, 64, 64, 1);
+        }
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Content container */
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Links */
+a {
+    color: rgba(28, 61, 247, 1);
+    text-decoration: underline;
+}
+
+    a:hover {
+        color: rgba(215, 64, 64, 1);
+    }
+
+/* Expenses page specific styling */
+.expenses-page {
+    color: white; /* Set default text color to white */
+}
+
+    .expenses-page h1,
+    .expenses-page h3 {
+        color: white; /* Ensure headings are white */
+    }
+
+    .expenses-page table {
+        color: white; /* Ensure table text is white */
+    }
+
+    .expenses-page a {
+        color: #C850C0; /* Light purple for links */
+    }
+
+        .expenses-page a:hover {
+            color: #460ec9; /* Darker purple for hovered links */
+        }

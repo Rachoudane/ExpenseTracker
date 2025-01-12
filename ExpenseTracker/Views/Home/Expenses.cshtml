@@ -4,7 +4,7 @@
 
 @model List<Expense>
 
-<div class="text-center">
+<div class="text-center expenses-page">
     <h1 class="display-4">Expenses</h1>
     <br />
     <hr />
@@ -31,21 +31,21 @@
             @{
                 foreach (var expense in Model)
                 {
-                 <tr>
-                    <td>
-                        @expense.Id
-                    </td>
-                    <td>
-                        @expense.Value
-                    </td>
-                    <td>
-                        @expense.Description
-                    </td>
-                    <td>
-                        <a asp-action="CreateEditExpense" asp-route-id="@expense.Id">Edit</a>
-                        <a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
-                    </td>
-                 </tr>   
+                    <tr>
+                        <td>
+                            @expense.Id
+                        </td>
+                        <td>
+                            @expense.Value
+                        </td>
+                        <td>
+                            @expense.Description
+                        </td>
+                        <td>
+                            <a asp-action="CreateEditExpense" asp-route-id="@expense.Id">Edit</a>
+                            <a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
+                        </td>
+                    </tr>
                 }
             }
         </tbody>
