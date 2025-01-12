@@ -22,7 +22,8 @@ namespace ExpenseTracker.Controllers
 
         public IActionResult Expenses()
         {
-            return View();
+            var allExpenses = _context.Expenses.ToList();
+            return View(allExpenses);
         }
         public IActionResult CreateEditExpense()
         {
